@@ -1,0 +1,27 @@
+{
+  "name": "bootstrap-responsive-table",
+  "description": "A drop-in solution for supporting tables on small devices.",
+  "main": "index.js",
+  "authors": [
+    "Paul Eiche <peiche@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bootstrap",
+    "table",
+    "responsive",
+    "rwd"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}

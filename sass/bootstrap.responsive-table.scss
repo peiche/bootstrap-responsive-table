@@ -1,0 +1,66 @@
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+
+@import 'variables';
+@import 'mixins';
+
+.table-collapse {
+
+  // Iterate through each array value.
+  // The first property is used in the name of the class
+  // The second property is the target dimension.
+  @each $size in $sizes {
+    $name: nth($size, 1);
+    $width: nth($size, 2);
+
+    @media screen and (max-width: $width) {
+      &-#{$name} {
+        display: block;
+
+        caption,
+        tbody,
+        tr,
+        th,
+        td {
+          display: block;
+        }
+
+        thead,
+        tfoot {
+          display: none;
+        }
+
+        tr {
+          border-top: 1px solid $table-border-color;
+
+          &:first-child {
+            border: 0;
+          }
+        }
+
+        > tbody > tr > th,
+        > tbody > tr > td {
+          @include property-color-opacity(border-top-color, $table-border-color, 0.5);
+
+          &:first-child {
+            border: 0;
+          }
+        }
+
+        .has-label[data-label] {
+          position: relative;
+          padding-left: 50%;
+
+          &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: $table-cell-padding;
+            content: attr(data-label);
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,4 @@
+@mixin property-color-opacity($property, $color, $opacity: 1) {
+    $property: $color; // fallback
+    $property: rgba($color, $opacity);
+}

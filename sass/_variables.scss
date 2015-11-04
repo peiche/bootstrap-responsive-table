@@ -1,0 +1,7 @@
+// An array of sizes to assign our media queries.
+// Each value contains both the name of the size and the pixel size to target.
+// We can reuse Bootstrap's size variables here.
+$sizes: (
+  'phone'   $screen-phone,
+  'tablet'  $screen-tablet
+);
